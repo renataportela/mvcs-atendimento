@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^localhost$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^localhost$
+RewriteCond %{REQUEST_URI} !madeira-madeira/public/
+RewriteRule (.*) /madeira-madeira/public/$1 [L]
+</IfModule>
