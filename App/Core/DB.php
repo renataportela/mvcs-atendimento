@@ -5,7 +5,7 @@ class DB{
 
     public static $instance;
     private $hostname = 'localhost';
-    private $dbName = 'atendimento';
+    private $dbName = 'atendimento_backup';
     private $username = 'root';
     private $password = '';
     private $connection;
