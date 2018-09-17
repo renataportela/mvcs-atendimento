@@ -5,7 +5,6 @@ use \App\Core\Controller;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Topic;
-use App\Models\Subtopic;
 use App\Models\StatusTicket;
 use App\Core\DB;
 
@@ -67,8 +66,7 @@ class SeedController extends Controller
            `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
            PRIMARY KEY (`id`),
            KEY `fk_tickets_user` (`user_id`),
-           KEY `fk_tickets_topic` (`topic_id`),
-           KEY `fk_tickets_subtopic` (`subtopic_id`)
+           KEY `fk_tickets_topic` (`topic_id`)
          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
       );
 
