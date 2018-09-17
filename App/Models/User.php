@@ -19,7 +19,7 @@ class User extends Model
    {
      $user = new User();
 
-     $result = $user->db()->select('*')->from('users')->where('role_id', '=', $role_id)->limit(1)->get();
+     $result = $user->db()->select('*')->from('users')->where('role_id', '=', $role_id)->limit(1)->fetchAll();
      $user->fill($result[0]);
      return $user;
    }
