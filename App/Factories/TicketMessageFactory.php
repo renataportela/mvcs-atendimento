@@ -7,7 +7,6 @@ use App\Models\TicketMessage;
 
 abstract class TicketMessageFactory
 {
-   //
    public static function create($fields)
    {
       extract($fields);
