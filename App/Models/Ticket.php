@@ -43,13 +43,11 @@ class Ticket extends Model
    {
       return
          "SELECT tickets.*, DATE_FORMAT(tickets.created_at, '%d/%m/%Y %H:%i') as display_created_at,
-            topics.description AS topic, subtopics.description AS subtopic,
-            status_tickets.description as status, users.name
+            topics.description AS topic, status_tickets.description as status, users.name
           FROM tickets
           INNER JOIN users ON tickets.user_id = users.id
           INNER JOIN topics ON tickets.topic_id = topics.id
-          INNER JOIN status_tickets ON tickets.status_id = status_tickets.id
-          LEFT JOIN subtopics ON tickets.subtopic_id = subtopics.id";
+          INNER JOIN status_tickets ON tickets.status_id = status_tickets.id";
    }
 
    public static function find($id)
