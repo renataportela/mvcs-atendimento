@@ -19,6 +19,7 @@ Sistema de atendimento básico
 
 ## Factory
 
+```
 abstract class TicketMessageFactory
 {
    public static function create($fields)
@@ -35,9 +36,11 @@ abstract class TicketMessageFactory
       ...
    }
 }
+```
 
 ## Dependency Injection
 
+```
 class TicketMessage extends Model{
    ...
 
@@ -52,3 +55,4 @@ class TicketMessage extends Model{
 
    ...
 }
+```
